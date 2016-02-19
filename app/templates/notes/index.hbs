@@ -1,0 +1,8 @@
+{{input value=noteContent class="new-note"}}
+<button {{action "addNote" noteContent}} class='add-note'>Add Note</button>
+{{#each model as |note|}}
+<ul>
+  <li>{{link-to note.content "notes.note" note}}</li>
+</ul>
+{{/each}}
+
